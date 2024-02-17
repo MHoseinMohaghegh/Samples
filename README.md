@@ -1,2 +1,2 @@
-“My Sample projects”
+“My Sample Projects”
 
