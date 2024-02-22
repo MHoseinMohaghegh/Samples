@@ -17,7 +17,9 @@ print("For playing, please enter rock or paper or scissors.")
 while user != 3 and computer != 3:
     # User input for their choice
     user_choice = input("Your choice: ")
-
+    # check if the user select the word from this list, and if it is not, gets a new word
+    if user_choice not in options:
+        continue
     # Computer randomly selects an option
     computer_choice = random.choice(options)
     print(f"Computer's choice: {computer_choice}")
