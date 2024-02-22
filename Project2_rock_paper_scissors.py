@@ -1,30 +1,49 @@
-# Roch, Paper, Scissors
+# Rock, Paper, Scissors Game
+
+# Import the random module for computer's random choice
 import random
 
-
+# Initialize user and computer scores
 user = 0
 computer = 0
-a = ["rock", "paper", "scissors"]
-print("Baraye bazi, kalameye delkhah ra type konid(rock, paper, scissors).")
+
+# Define the options for the game
+options = ["rock", "paper", "scissors"]
+
+# Print instructions for the user
+print("For playing, please enter rock or paper or scissors.")
+
+# Main game loop - continues until either user or computer reaches a score of 3
 while user != 3 and computer != 3:
-    x = input("Entekhabe shoma: ")
-    y = random.choice(a)
-    print(f"Entekhabe computer: {y}")
-    if x == "paper" and y == "rock":
+    # User input for their choice
+    user_choice = input("Your choice: ")
+
+    # Computer randomly selects an option
+    computer_choice = random.choice(options)
+    print(f"Computer's choice: {computer_choice}")
+
+    # Determine the winner of the round and update scores
+    if user_choice == "paper" and computer_choice == "rock":
         user += 1
-    elif x == "rock" and y == "scissors":
+    elif user_choice == "rock" and computer_choice == "scissors":
         user += 1
-    elif x == "scissors" and y == "paper":
+    elif user_choice == "scissors" and computer_choice == "paper":
         user += 1
-    elif y == "paper" and x == "rock":
+    elif computer_choice == "paper" and user_choice == "rock":
         computer += 1
-    elif y == "rock" and x == "scissors":
+    elif computer_choice == "rock" and user_choice == "scissors":
         computer += 1
-    elif y == "scissors" and x == "paper":
+    elif computer_choice == "scissors" and user_choice == "paper":
         computer += 1
-    print(f"""Emtiaze shoma: {user}
-Emtiaze computer: {computer} """)
+
+    # Display current scores after each round
+    print(f"Your score: {user}\nComputer score: {computer}")
+
+# Determine the overall winner and display the result
 if user > computer:
-    print("Shoma barande shodid.")
+    print("You win.")
 else:
-    print("Computer barande shod.")
+    print("Computer wins.")
+
+# Wait for user input before closing the program
+input()
