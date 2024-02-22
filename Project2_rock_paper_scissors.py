@@ -25,15 +25,15 @@ while user != 3 and computer != 3:
     print(f"Computer's choice: {computer_choice}")
 
     # Determine the winner of the round and update scores
-    if user_choice == "paper" and computer_choice == "rock":
+    if user_choice == "rock" and computer_choice == "scissors":
         user += 1
-    elif user_choice == "rock" and computer_choice == "scissors":
+    elif user_choice == "paper" and computer_choice == "rock":
         user += 1
     elif user_choice == "scissors" and computer_choice == "paper":
         user += 1
-    elif computer_choice == "paper" and user_choice == "rock":
-        computer += 1
     elif computer_choice == "rock" and user_choice == "scissors":
+        computer += 1
+    elif computer_choice == "paper" and user_choice == "rock":
         computer += 1
     elif computer_choice == "scissors" and user_choice == "paper":
         computer += 1
@@ -43,7 +43,7 @@ while user != 3 and computer != 3:
 
 # Determine the overall winner and display the result
 if user > computer:
-    print("You win.")
+    print("You won.")
 else:
     print("Computer wins.")
 
