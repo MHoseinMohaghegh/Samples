@@ -7,11 +7,11 @@ import random
 def create_sudoku():  # create the true sudoku board
     for i in range(9):
         while True:
-            limit = 0
             # all these numbers should put completely on all rows
             true_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
             # try to put the numbers
             for j in range(9):
+                limit = 0
                 while True:
                     # get a random number from our list
                     x = random.choice(true_list)
